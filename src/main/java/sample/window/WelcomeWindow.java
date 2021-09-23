@@ -1,12 +1,9 @@
 package main.java.sample.window;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import main.java.sample.helpers.SceneLoader;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,8 +11,12 @@ import java.util.ResourceBundle;
 
 public class WelcomeWindow implements Initializable {
     @FXML
-    private Button loginBtn;
-    private Button registerBtn;
+    private Button loginBtn, registerBtn;
+    private SceneLoader sceneLoader;
+
+    public WelcomeWindow() {
+        this.sceneLoader = new SceneLoader();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -23,17 +24,18 @@ public class WelcomeWindow implements Initializable {
     }
 
     public void handleButtonClick(javafx.event.ActionEvent event) throws Exception {
-        loadLoginWindow();
-
+        if(event.getSource()==loginBtn){
+            loadLoginWindow();
+        } else {
+            loadRegisterWindow();
+        }
     }
 
     private void loadLoginWindow() throws IOException {
-        System.out.println("test");
-        Stage stage = (Stage) loginBtn.getScene().getWindow();
-        Parent root;
-        root = FXMLLoader.load(getClass().getResource("../../../resources/fxml/LoginWindow.fxml"));
-        Scene scene = new Scene(root, 600, 400);
-        stage.setScene(scene);
-        stage.show();
+        sceneLoader.loadScene(loginBtn, "../../../resources/fxml/LoginWindow.fxml");
+    }
+
+    private void loadRegisterWindow() throws IOException {
+        sceneLoader.loadScene(registerBtn,"../../../resources/fxml/RegisterWindow.fxml");
     }
 }
