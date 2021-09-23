@@ -15,6 +15,7 @@ import java.util.ResourceBundle;
 public class WelcomeWindow implements Initializable {
     @FXML
     private Button loginBtn;
+    @FXML
     private Button registerBtn;
 
     @Override
@@ -23,15 +24,26 @@ public class WelcomeWindow implements Initializable {
     }
 
     public void handleButtonClick(javafx.event.ActionEvent event) throws Exception {
-        loadLoginWindow();
-
+        if(event.getSource()==loginBtn){
+            loadLoginWindow();
+        } else {
+            loadRegisterWindow();
+        }
     }
 
     private void loadLoginWindow() throws IOException {
-        System.out.println("test");
         Stage stage = (Stage) loginBtn.getScene().getWindow();
         Parent root;
         root = FXMLLoader.load(getClass().getResource("../../../resources/fxml/LoginWindow.fxml"));
+        Scene scene = new Scene(root, 600, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    private void loadRegisterWindow() throws IOException {
+        Stage stage = (Stage) registerBtn.getScene().getWindow();
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("../../../resources/fxml/RegisterWindow.fxml"));
         Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
         stage.show();
