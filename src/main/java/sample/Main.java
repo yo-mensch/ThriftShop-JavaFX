@@ -10,6 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        System.out.println("test");
         Parent root = FXMLLoader.load(getClass().getResource("../../resources/fxml/WelcomeWindow.fxml"));
         primaryStage.setTitle("Welcome to Thrift Shop");
         primaryStage.setScene(new Scene(root, 600, 400));
