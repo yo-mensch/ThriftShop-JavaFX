@@ -52,6 +52,5 @@
          </font>
       </Text>
       <Button fx:id="addressManagementBtn" layoutX="484.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleButtonClick" />
-      <Button fx:id="deleteAccountBtn" layoutX="449.0" layoutY="317.0" mnemonicParsing="false" onAction="#handleButtonClick" text="Delete your account" />
    </children>
 </AnchorPane>

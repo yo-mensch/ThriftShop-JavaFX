@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Main extends Application {
 
     @Override
-    public void start(@org.jetbrains.annotations.NotNull Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception{
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("ThriftShop");
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../../resources/fxml/WelcomeWindow.fxml")));
         primaryStage.setTitle("Welcome to Thrift Shop");

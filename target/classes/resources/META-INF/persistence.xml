@@ -10,10 +10,10 @@
     <class>javaSample.sample.model.User</class>
     <class>javaSample.sample.model.ShoppingCart</class>
     <class>javaSample.sample.model.Product</class>
-    <class>javaSample.sample.model.Administrator</class>
     <class>javaSample.sample.model.Address</class>
     <class>javaSample.sample.model.Order</class>
     <class>javaSample.sample.model.Payment</class>
+    <class>javaSample.sample.model.Review</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
   <properties>
     <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
@@ -23,7 +23,6 @@
     <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
     <property name="hibernate.show_sql" value="true"/>
     <property name="hibernate.hbm2ddl.auto" value="update"/>
-<!--    <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
   </properties>
   </persistence-unit>
 </persistence>

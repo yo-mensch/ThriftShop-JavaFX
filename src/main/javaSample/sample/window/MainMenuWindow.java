@@ -31,6 +31,8 @@ public class MainMenuWindow implements Initializable {
     @FXML
     private Button addNewProductBtn, manageProductBtn;
     @FXML
+    private Button viewOrderDetailsBtn;
+    @FXML
     private ListView<Product> availableProductList;
     @FXML
     private TableView<OrderTableViewModel> yourOrderTable;
@@ -148,6 +150,15 @@ public class MainMenuWindow implements Initializable {
             productHibController.updateProduct(availableProductList.getSelectionModel().getSelectedItem());
             shoppingCartHibController.updateShoppingCart(UserService.getInstance().getShoppingCart());
             Alert.display("Info","Product added to your cart!", "Ok");
+        }
+        if(event.getSource()==viewOrderDetailsBtn){
+            OrderTableViewModel selected = yourOrderTable.getSelectionModel().getSelectedItem();
+            if(selected==null){
+                Alert.display("Error", "You must select an order to continue!","Ok");
+            } else {
+                Order selectedOrder = orderHibController.getOrderById(selected.getOrderId());
+                sceneLoader.loadOrderDetails(viewOrderDetailsBtn, "../../../resources/fxml/OrderDetailWindow.fxml", selectedOrder);
+            }
         }
     }
 

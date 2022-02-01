@@ -111,4 +111,13 @@ public class OrderHibController {
         }
         return foundOrders;
     }
+
+    public Order getOrderById(int id){
+        for(Order order: getOrdersList()){
+            if(order.getId()==id){
+                return order;
+            }
+        }
+        return null;
+    }
 }

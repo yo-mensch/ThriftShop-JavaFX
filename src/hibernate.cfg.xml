@@ -18,5 +18,6 @@
     <mapping class="javaSample.sample.model.Address"/>
     <mapping class="javaSample.sample.model.Product"/>
     <mapping class="javaSample.sample.model.ShoppingCart"/>
+    <mapping class="javaSample.sample.model.Review"/>
   </session-factory>
 </hibernate-configuration>

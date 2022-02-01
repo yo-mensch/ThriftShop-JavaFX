@@ -1,6 +1,11 @@
 package javaSample.sample.model;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 @Entity
@@ -21,6 +26,9 @@ public class Product {
     private Order order;
     @ManyToOne
     private ShoppingCart shoppingCart;
+    @OneToMany(mappedBy = "product", cascade = CascadeType.MERGE)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<Review> reviews;
 
     public Product(String name, String description, float price, User author) {
         this.id = new Random(System.currentTimeMillis()).nextInt();
@@ -30,6 +38,7 @@ public class Product {
         this.author = author;
         this.order = null;
         this.shoppingCart = null;
+        this.reviews = new ArrayList<>();
     }
 
     public Product() {
@@ -65,5 +74,13 @@ public class Product {
 
     public void setShoppingCart(ShoppingCart shoppingCart) {
         this.shoppingCart = shoppingCart;
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 }
