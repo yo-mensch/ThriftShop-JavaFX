@@ -11,7 +11,10 @@ jobs:
       - image: circleci/openjdk:11-jdk
     steps:
       - checkout
-      - run: gradle test
+      - run:
+          name: Run tests
+          command: |
+            java -jar junit-platform-console-standalone-1.9.2.jar --class-path /Users/rasajurgutyte/Desktop/ThriftShop-JavaFX/src/main/tests --scan-class-path
 workflows:
   build_and_test:
     jobs:
