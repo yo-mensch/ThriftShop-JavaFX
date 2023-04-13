@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaSample.sample.window.OrderDetailWindow">
+   <children>
+      <ListView fx:id="orderedProductList" layoutX="42.0" layoutY="104.0" prefHeight="234.0" prefWidth="238.0" />
+      <Text layoutX="42.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Order Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="321.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Status:" />
+      <Text fx:id="orderStatusText" layoutX="440.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="321.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment info:" />
+      <Text layoutX="367.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+      <Text layoutX="367.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+      <Text fx:id="paymentStatusText" layoutX="440.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="paymentPriceText" layoutX="440.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="42.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product list:" />
+      <Button fx:id="viewProductDetailsBtn" layoutX="321.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleButtonClick" text="View Selected Product Details" />
+      <Button fx:id="backBtn" layoutX="513.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleButtonClick" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+  <persistence-unit name="ThriftShop" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>javaSample.sample.hibController.ThriftShopHib</class>
+    <class>javaSample.sample.hibController.UserHibController</class>
+    <class>javaSample.sample.model.User</class>
+    <class>javaSample.sample.model.ShoppingCart</class>
+    <class>javaSample.sample.model.Product</class>
+    <class>javaSample.sample.model.Address</class>
+    <class>javaSample.sample.model.Order</class>
+    <class>javaSample.sample.model.Payment</class>
+    <class>javaSample.sample.model.Review</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+  <properties>
+    <property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+    <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/thrift_shopdb?createDatabaseIfNotExist=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8"/>
+    <property name="javax.persistence.jdbc.user" value="root"/>
+    <property name="javax.persistence.jdbc.password" value=""/>
+    <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB10Dialect"/>
+    <property name="hibernate.show_sql" value="true"/>
+    <property name="hibernate.hbm2ddl.auto" value="update"/>
+  </properties>
+  </persistence-unit>
+</persistence>
