@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            java -jar junit-platform-console-standalone.jar --class-path org/junit/platform/junit-platform-console-standalone/1.9.2 --scan-class-path
+            java -jar junit-platform-console-standalone.jar --class-path /Users/rasajurgutyte/.m2/repository/org/junit/platform/junit-platform-console-standalone/1.9.2/junit-platform-console-standalone-1.9.2.jar --scan-class-path
 workflows:
   build_and_test:
     jobs:
