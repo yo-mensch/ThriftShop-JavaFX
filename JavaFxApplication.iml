@@ -32,12 +32,16 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="zulu-19" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="mysql:mysql-connector-java:8.0.26" level="project" />
     <orderEntry type="library" name="Hibernate 5.4.11-5.4.11" level="project" />
+    <orderEntry type="library" name="Spring-5.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Spring MVC-5.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Spring Web Services-2.0.2" level="project" />
+    <orderEntry type="library" name="Spring Webflow-2.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.mariadb.jdbc:mariadb-java-client:2.7.3" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains:annotations:23.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains:annotations:24.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.4.11.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.24.0-GA" level="project" />
@@ -57,5 +61,14 @@
     <orderEntry type="library" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.persistence:javax.persistence-api:2.2" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:20.0" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:19" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:mac-aarch64:19" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:19" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:mac-aarch64:19" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:19" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:mac-aarch64:19" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:19" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:mac-aarch64:19" level="project" />
+    <orderEntry type="library" name="mockito.junit.jupiter" level="project" />
   </component>
 </module>
