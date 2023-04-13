@@ -11,10 +11,7 @@ jobs:
       - image: circleci/openjdk:11-jdk
     steps:
       - checkout
-      - run:
-          name: Run tests
-          command: |
-            java -jar junit-platform-console-standalone.jar --class-path /Users/rasajurgutyte/.m2/repository/org/junit/platform/junit-platform-console-standalone/1.9.2/junit-platform-console-standalone-1.9.2.jar --scan-class-path
+      - run: gradle test
 workflows:
   build_and_test:
     jobs:
