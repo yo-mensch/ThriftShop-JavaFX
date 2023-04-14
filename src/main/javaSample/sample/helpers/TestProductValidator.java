@@ -1,10 +1,13 @@
 package javaSample.sample.helpers;
 import javaSample.sample.helpers.validator.ProductValidator;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@RunWith(JUnit4.class)
 public class TestProductValidator {
 
     public ProductValidator productValidator = new ProductValidator();
