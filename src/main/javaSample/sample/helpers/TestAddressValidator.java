@@ -1,7 +1,5 @@
-package tests;
-
+package javaSample.sample.helpers;
 import javaSample.sample.helpers.validator.AddressValidator;
-import javaSample.sample.helpers.validator.ProductValidator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

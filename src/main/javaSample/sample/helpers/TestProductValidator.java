@@ -1,5 +1,4 @@
-package tests;
-
+package javaSample.sample.helpers;
 import javaSample.sample.helpers.validator.ProductValidator;
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestProductValidator {
 
+    public ProductValidator productValidator = new ProductValidator();
+
     //valid produktas
     @Test
     public void testValidateProductWithValidInput() {
@@ -15,7 +16,7 @@ public class TestProductValidator {
         String productDescription = "This is a test product";
         String productPrice = "10.00";
 
-        boolean result = ProductValidator.isProductValid(productName, productDescription, productPrice);
+        boolean result = productValidator.isProductValid(productName, productDescription, productPrice);
 
         assertTrue(result);
     }
@@ -27,7 +28,7 @@ public class TestProductValidator {
         String productDescription = "This is a test product";
         String productPrice = "10.00";
 
-        boolean result = ProductValidator.validateFields(productName, productDescription, productPrice);
+        boolean result = productValidator.validateFields(productName, productDescription, productPrice);
 
         assertFalse(result);
     }
@@ -39,7 +40,7 @@ public class TestProductValidator {
         String productDescription = "This is a test product";
         String productPrice = "0.00";
 
-        boolean result = ProductValidator.validatePrice(productPrice);
+        boolean result = productValidator.validatePrice(productPrice);
 
         assertFalse(result);
     }

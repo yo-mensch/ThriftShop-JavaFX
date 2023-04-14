@@ -1,20 +1,20 @@
 package javaSample.sample.helpers.validator;
 
-import javaSample.sample.window.Alert;
-import javaSample.sample.window.AlertWrapper;
+//import javaSample.sample.window.Alert;
+//import javaSample.sample.window.AlertWrapper;
 
 public class ProductValidator implements Validator{
 
     public static boolean validateProduct(String productName,String productDescription, String productPrice){
-        AlertWrapper alertWrapper = new AlertWrapper(new Alert());
+        //AlertWrapper alertWrapper = new AlertWrapper(new Alert());
         if(validateFields(productName,productDescription,productPrice)){
             if(validatePrice(productPrice)){
                 return true;
             }
-            else showPriceError();
+            //else showPriceError();
             return false;
         }
-        else showBlankFieldError();
+        //else showBlankFieldError();
         return false;
     }
 
@@ -37,11 +37,11 @@ public class ProductValidator implements Validator{
         return validateFields(productName,productDescription,productPrice)&&validatePrice(productPrice);
     }
 
-    public static void showPriceError(){
-        Alert.display("Error","Price must be bigger than 0.0","Ok");
-    }
+//    public static void showPriceError(){
+//        Alert.display("Error","Price must be bigger than 0.0","Ok");
+//    }
 
-    public static void showBlankFieldError(){
-        Alert.display("Error","Please fill in all the fields", "Ok");
-    }
+//    public static void showBlankFieldError(){
+//        Alert.display("Error","Please fill in all the fields", "Ok");
+//    }
 }
